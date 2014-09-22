@@ -2,3 +2,8 @@
         text-align: center;
         font-family: Arial;
 }
+
+img {
+        margin-right: auto;
+        margin-left: auto;
+}
