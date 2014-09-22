@@ -4,6 +4,6 @@
 }
 
 img {
-        margin-right: auto;
-        margin-left: auto;
+        position: absolute;
+        margin-left: 150px;
 }
