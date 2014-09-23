@@ -30,7 +30,7 @@ ul {
         width: 700px;
 }
 
-li {
+.link {
         list-style: none;
         float: left;
         padding: 10px;
