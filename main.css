@@ -2,10 +2,3 @@
         text-align: center;
         font-family: Arial;
 }
-
-img {
-        position: absolute;
-        top: 100px;
-        left: 150px;
-        z-index: -1;
-}
