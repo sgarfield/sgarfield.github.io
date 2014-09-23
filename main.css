@@ -18,8 +18,17 @@ img {
 
 div {
         display: block;
+        text-align: center;
 }
 
 .nav_bar {
         float: left;
+}
+
+ul {
+        list-style: none;
+}
+
+li {
+        list-style: none;
 }
