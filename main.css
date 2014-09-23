@@ -16,6 +16,10 @@ img {
         width: 100px;
 }
 
-#wrapper {
-        width: 400px;
+div {
+        display: block;
+}
+
+.nav_bar {
+        float: left;
 }
