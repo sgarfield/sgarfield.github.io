@@ -12,4 +12,10 @@ img {
 
 #links {
         text-align: center;
+        float: left;
+        width: 100px;
+}
+
+#wrapper {
+        width: 400px;
 }
