@@ -22,12 +22,12 @@ div {
 .nav_bar {
         float: left;
         margin-left: 215px;
+        width: 700px;
+        list-style: none;
 }
 
-ul {
-        list-style: none;
-        text-align: center;
-        width: 700px;
+.courses, .exp {
+        text-align: left;
 }
 
 .link {
