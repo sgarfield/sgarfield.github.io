@@ -2,3 +2,11 @@
         text-align: center;
         font-family: Arial;
 }
+
+img {
+        z-index: -1;
+}
+
+a {
+        text-align: center;
+}
