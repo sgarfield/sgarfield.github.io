@@ -28,12 +28,17 @@ div {
 
 .nav_bar {
         float: left;
+        margin-left: 215px;
 }
 
 ul {
         list-style: none;
+        text-align: center;
+        width: 700px;
 }
 
 li {
         list-style: none;
+        float: left;
+        padding: 10px;
 }
