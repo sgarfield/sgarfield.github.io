@@ -9,6 +9,11 @@
         width: 100px;
 }
 
+img {
+        height: 480px;
+        width: 360px;
+}
+
 div {
         display: block;
         text-align: center;
