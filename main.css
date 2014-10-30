@@ -1,12 +1,9 @@
-#my_name {
-        text-align: center;
-        font-family: Arial;
+body {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-#links {
+#my_name {
         text-align: center;
-        float: left;
-        width: 100px;
 }
 
 img {
@@ -16,6 +13,10 @@ img {
 
 div {
         text-align: center;
+}
+
+p {
+        text-align: justify;
 }
 
 .container {
@@ -36,4 +37,33 @@ div {
         list-style: none;
         padding: 10px;
         display: inline-block;
+}
+
+.contact {
+        list-style: none;
+}
+
+.footnotes {
+        padding-left: 0px;
+}
+
+a {
+        text-decoration: none;
+}
+
+a:link {
+        color: blue;
+}
+
+a:visited {
+        color: #551A8B;
+}
+
+a:hover {
+        text-decoration: underline;
+        color: red;
+}
+
+a:active {
+        color: black;
 }
