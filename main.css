@@ -43,6 +43,10 @@ p {
         list-style: none;
 }
 
+.tunes, .vids {
+        text-align: left;
+}
+
 .footnotes {
         padding-left: 0px;
 }
