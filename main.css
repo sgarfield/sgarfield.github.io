@@ -28,19 +28,10 @@ p {
         padding-left: 0px;
 }
 
-.courses, .exp {
-        text-align: left;
-        padding-left: 158px;
-}
-
 .link {
         list-style: none;
         padding: 10px;
         display: inline-block;
-}
-
-.contact {
-        list-style: none;
 }
 
 .tunes, .vids {
