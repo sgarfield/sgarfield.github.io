@@ -15,7 +15,6 @@ img {
 }
 
 div {
-        display: block;
         text-align: center;
 }
 
@@ -25,10 +24,7 @@ div {
 }
 
 .nav_bar {
-        float: left;
-        margin-left: 215px;
-        width: 700px;
-        list-style: none;
+        padding-left: 0px;
 }
 
 .courses, .exp {
@@ -38,6 +34,6 @@ div {
 
 .link {
         list-style: none;
-        float: left;
         padding: 10px;
+        display: inline-block;
 }
