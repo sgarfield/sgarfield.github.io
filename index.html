@@ -1,34 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sam Garfield's Website</title>
+        <link rel="stylesheet" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+        /* JQUERY FOR SLIDING NAVIGATION */
+        $(document).ready(function() {
+            $(document).on("scroll", onScroll);
 
-<head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="shortcut icon" href="images/favicon.ico" />
-        <title>Sam Garfield Home</title>
-</head>
+            $('a[href*=#]').each(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                && location.hostname == this.hostname && this.hash.replace(/#/,'') ) {
+                    var $targetId = $(this.hash);
+                    var $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
 
-<body>
-        <div class="container">
-                <div class="wrapper">
-                        <ul class="nav_bar">
-                                <li class="link"><a href="https://sgarfield.github.io/">Home</a></li>
-                                <li class="link"><a href="https://sgarfield.github.io/bio">Bio</a></li>
-                                <li class="link"><a target="_blank" href="https://sgarfield.github.io/resume.pdf">Resume</a></li>
-                                <li class="link"><a target="_blank" href="https://github.com/sgarfield">Github</a></li>
-                                <li class="link"><a href="https://sgarfield.github.io/contact">Contact</a></li>
-                        </ul>
-                </div>
+        /* JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV */
+                        $(this).click(function() {
+                            $("#nav li a").removeClass("active");
+                            $(this).addClass('active');
+                            $('html, body').animate({scrollTop: targetOffset}, 500);
+                            return false;
+                        });
+                    }
+                }
+            });
+        });
 
-                <div class="main">
-                        <h1 id="my_name">Sam Garfield</h1>
-                        <img src="images/me.jpg" alt="It's me!"/>
-                </div>
-                <br></br>
-                <div class="footnotes">
-                        **Footnotes make me look cool.
-                </div>
+        /* JQUERY SCROLL FUNCTION TO REMOVE AND ADD CLASS "ACTIVE" WHENEVER YOU'RE IN A PARTICULAR SECTION */
+        function onScroll(event){
+            var scrollPos = $(document).scrollTop();
+            $('#nav li a').each(function() {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $('#nav li a').removeClass("active");
+                    currLink.addClass("active");
+                    return false;
+                }
+            });
+        }
+    </script>
+    </head> 
+    <body>
+
+
+        <!-- HEADER START -->   
+        <header id="header">
+        <div class="content">
+            <nav id="nav">
+            	<ul>
+            		<li><a href="#slide1" class="active" title="Next Section">Home</a></li>
+            		<li><a href="#slide2" title="Next Section">About</a></li>
+            		<li><a href="#slide3" title="Next Section">Portfolio</a></li>
+            		<li><a href="#slide4" title="Next Section">Interests</a></li>
+            		<li><a href="#slide5" title="Next Section">Contact</a></li>
+            	</ul>
+            </nav>
         </div>
-</body>
+        </header>	
+        <!-- HEADER END -->   
 
+        <!-- SLIDES START -->   	
+    	<div id="slide1">
+    		<div class="content">
+    			<div class="container">
+                    <h1 align="center">Sam Garfield</h1>
+                </div>
+    		</div> 
+        </div>
+
+        <div id="divider"></div>
+
+        <div id="slide2">
+        	<div class="content" >
+            <div class="container">
+                <h2 align="center">About</h2>
+        	    <h3 class="text">I currently live in the lovely Boulder, Colorado. This past May, I graduated from Tufts University with a Computer Science degree. I am currently looking to join a tech company in Boulder as a software engineer/developer. Check out my <a href="resume.pdf">resume</a>!</h3>
+        	</div> 
+        	</div> 
+        </div> 
+	
+        <div id="divider"></div>
+	
+        <div id="slide3">
+        	<div class="content">
+        		<div class="container">
+                    <h2 align="center">Skills & Portfolio</h2>
+        	        <h3 class="text">I am first and foremost a problem solver. I am proficient in C and C++, and I have used the Express.JS/MongoDB/Heroku stack to develop a number of applications. Now I'm learning Python, Objective-C, Ruby, and Javascript frameworks like Angular and Backbone.</h3>
+                    <h3 class="centertext">You can find my Github page <a href="http://github.com/sgarfield">here</a>.</h3>
+        	    </div> 
+        	</div> 
+        </div> 
+
+        <div id="divider"></div>
+	
+    	<div id="slide4">
+    		<div class="content">
+                <div class="container">
+        		    <h2 align="center">Interests & Fun Facts</h2>
+                    <h3 class="text">I love running, rock climbing, improv, guitar, cycling, hiking, chess, comedy, and film. A few summers ago I did a cross-country cycling trip with a nonprofit called <a href="http://bikeandbuild.org">Bike & Build</a>, riding from Charleston, SC to Santa Cruz, CA. Check out their website if you're interested (and between the ages of 18 and 28).</h3>
+        		</div> 
+    		</div> 
+        </div> 
+	
+        <div id="divider"></div>
+	
+	<div id="slide5">
+		<div class="content">
+            <div class="container">
+                <h2 align="center">Contact</h2>
+                <h3 class="centertext">If you would like to get in touch, please email me at Samuel.Garfield2@gmail.com.</h3>
+            </div> 
+            <div align="center"><img id="sam" src="img/me.jpg" /></div>
+		    <div id="copyright">Copyright Sam Garfield</div>
+            <div id="cabinporn">Some images from <a href="http://cabinporn.com" target="_blank">Cabin Porn™</a></div>
+		</div> 
+        </div> 
+	
+<!--- SLIDES END -->
+
+    </body>
 </html>
